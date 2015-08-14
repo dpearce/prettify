@@ -17,16 +17,16 @@ Examples:
     output: 1.1B
  
  
-assumption: accepts a string representation of a numberic value and returns it prettified or leaves it alone
-assumption: bad input will simply be left alone and returned
-assumption: support negatives
-assumption: support thousands and quadtrillions
+- assumption: accepts a string representation of a numberic value and returns it prettified or leaves it alone
+- assumption: bad input will simply be left alone and returned
+- assumption: support negatives
+- assumption: support thousands and quadtrillions
 
 Problem break down
-numbers with 4 to 18 digits to the left of the decimal place will be prettified
-a number will be prettified when ...
+- numbers with 4 to 18 digits to the left of the decimal place will be prettified
+- a number will be prettified when ...
     - as an absolute value, the result of flooring its logarithm is between 3 and 17 inclusive
-a number will be prettified by ...
+- a number will be prettified by ...
     - determining a magnitude: by restricting the logarithm down to the nearest multiple of three
     - the magnitude is used to reduce the number and lookup the suffix
     - when the reduced number contains a decimal point, truncation must be applied
